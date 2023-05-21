@@ -33,6 +33,7 @@ public class PolicyController {
     }
 
 
+    @GetMapping
     public Iterable<Policy> getAllPolicies() {
         return policyRepository.findAll();
     }
