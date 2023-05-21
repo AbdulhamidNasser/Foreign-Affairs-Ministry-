@@ -27,6 +27,11 @@ public class PolicyController {
     }
 
 
+    public Iterable<Policy> getAllPolicies() {
+        return policyRepository.findAll();
+    }
+
+
 
 
 
