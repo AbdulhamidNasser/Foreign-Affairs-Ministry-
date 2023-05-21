@@ -1,6 +1,8 @@
 package com.codline.ForeignAffairsMinistryAPI.Controller;
 
 import com.codline.ForeignAffairsMinistryAPI.Repository.PolicyRepository;
+import com.codline.ForeignAffairsMinistryAPI.Service.Policy;
+import org.springframework.web.bind.annotation.RequestBody;
 
 public class PolicyController {
 
