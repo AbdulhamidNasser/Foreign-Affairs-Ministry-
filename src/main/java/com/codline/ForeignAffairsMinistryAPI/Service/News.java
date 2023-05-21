@@ -1,5 +1,8 @@
 package com.codline.ForeignAffairsMinistryAPI.Service;
 
+import lombok.Data;
+
+@Data
 public class News {
 
     private Long id;
