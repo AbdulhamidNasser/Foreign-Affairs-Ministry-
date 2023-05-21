@@ -3,10 +3,7 @@ package com.codline.ForeignAffairsMinistryAPI.Controller;
 import com.codline.ForeignAffairsMinistryAPI.Repository.PolicyRepository;
 import com.codline.ForeignAffairsMinistryAPI.Service.Policy;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/policies")
@@ -16,6 +13,7 @@ public class PolicyController {
     private PolicyRepository policyRepository;
 
 
+    @PostMapping
     public Policy createPolicy(@RequestBody Policy policy) {
         return policyRepository.save(policy);
     }
