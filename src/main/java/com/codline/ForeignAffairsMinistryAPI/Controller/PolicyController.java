@@ -19,6 +19,7 @@ public class PolicyController {
     }
 
 
+    @PutMapping("/{id}")
     public Policy updatePolicy(@PathVariable Long id, @RequestBody Policy policy) {
         policy.setId(id);
         return policyRepository.save(policy);
