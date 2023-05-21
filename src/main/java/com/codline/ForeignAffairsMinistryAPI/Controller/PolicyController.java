@@ -1,4 +1,4 @@
 package com.codline.ForeignAffairsMinistryAPI.Controller;
 
-public class AccountController {
+public class PolicyController {
 }
