@@ -22,6 +22,13 @@ public class PolicyController {
 
 
 
+    public void deletePolicy(@PathVariable Long id) {
+        policyRepository.deleteById(id);
+    }
+
+
+
+
 
 
 
