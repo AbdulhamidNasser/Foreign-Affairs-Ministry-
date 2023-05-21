@@ -7,4 +7,6 @@ public interface PolicyRepository extends JpaRepository<Policy, Long> {
 
 
     Iterable<Policy> findByCountry(String country);
+
+    Iterable<Policy> findByRegion(String region);
 }
