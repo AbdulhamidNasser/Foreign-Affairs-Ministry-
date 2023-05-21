@@ -33,6 +33,12 @@ public class PolicyController {
 
 
 
+    public Iterable<Policy> getPoliciesByCountry(@PathVariable String country) {
+        return policyRepository.findByCountry(country);
+    }
+
+
+
 
 
 
