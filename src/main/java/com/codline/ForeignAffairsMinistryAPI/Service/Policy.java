@@ -7,7 +7,7 @@ public class Policy {
     private String description;
     private String country;
     private String region;
-    
+    private String topic;
 
 
 }
