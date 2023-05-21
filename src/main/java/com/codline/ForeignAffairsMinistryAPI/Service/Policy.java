@@ -5,6 +5,7 @@ public class Policy {
     private Long id;
     private String title;
     private String description;
+    private String country;
 
 
 }
