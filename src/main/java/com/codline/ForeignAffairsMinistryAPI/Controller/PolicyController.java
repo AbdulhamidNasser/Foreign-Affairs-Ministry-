@@ -44,6 +44,12 @@ public class PolicyController {
 
 
 
+    public Iterable<Policy> getPoliciesByTopic(@PathVariable String topic) {
+        return policyRepository.findByTopic(topic);
+    }
+
+
+
 
 
 
