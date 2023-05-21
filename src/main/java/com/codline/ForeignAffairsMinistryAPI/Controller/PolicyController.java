@@ -38,6 +38,11 @@ public class PolicyController {
     }
 
 
+    public Iterable<Policy> getPoliciesByRegion(@PathVariable String region) {
+        return policyRepository.findByRegion(region);
+    }
+
+
 
 
 
