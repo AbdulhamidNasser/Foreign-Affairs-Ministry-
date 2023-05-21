@@ -46,6 +46,7 @@ public class PolicyController {
     }
 
 
+    @GetMapping("/{region}")
     public Iterable<Policy> getPoliciesByRegion(@PathVariable String region) {
         return policyRepository.findByRegion(region);
     }
