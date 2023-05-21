@@ -53,6 +53,7 @@ public class PolicyController {
 
 
 
+    @GetMapping("/{topic}")
     public Iterable<Policy> getPoliciesByTopic(@PathVariable String topic) {
         return policyRepository.findByTopic(topic);
     }
