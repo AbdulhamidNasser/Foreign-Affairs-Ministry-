@@ -27,6 +27,7 @@ public class PolicyController {
 
 
 
+    @DeleteMapping("/{id}")
     public void deletePolicy(@PathVariable Long id) {
         policyRepository.deleteById(id);
     }
