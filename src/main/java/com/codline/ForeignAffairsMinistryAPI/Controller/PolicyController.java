@@ -40,6 +40,7 @@ public class PolicyController {
 
 
 
+    @GetMapping("/{country}")
     public Iterable<Policy> getPoliciesByCountry(@PathVariable String country) {
         return policyRepository.findByCountry(country);
     }
