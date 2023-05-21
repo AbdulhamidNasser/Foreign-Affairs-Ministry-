@@ -58,17 +58,4 @@ public class PolicyController {
         return policyRepository.findByTopic(topic);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
