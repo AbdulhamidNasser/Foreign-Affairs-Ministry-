@@ -1,5 +1,8 @@
 package com.codline.ForeignAffairsMinistryAPI.Service;
 
+import lombok.Data;
+
+@Data
 public class Policy {
 
     private Long id;
