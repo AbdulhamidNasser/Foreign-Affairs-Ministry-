@@ -12,4 +12,22 @@ public class PolicyController {
     public Policy createPolicy(@RequestBody Policy policy) {
         return policyRepository.save(policy);
     }
+
+
+    public Policy updatePolicy(@PathVariable Long id, @RequestBody Policy policy) {
+        policy.setId(id);
+        return policyRepository.save(policy);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
