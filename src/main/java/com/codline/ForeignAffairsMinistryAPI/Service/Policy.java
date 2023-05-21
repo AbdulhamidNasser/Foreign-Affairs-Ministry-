@@ -6,6 +6,8 @@ public class Policy {
     private String title;
     private String description;
     private String country;
+    private String region;
+    
 
 
 }
