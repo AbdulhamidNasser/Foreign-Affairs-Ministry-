@@ -17,5 +17,5 @@ public class News {
     private String description;
     private String country;
     private String region;
-    
+
 }
