@@ -12,10 +12,10 @@ import javax.persistence.Entity;
 @Data
 public class News {
 
-    private Long id;
+    private Integer id;
     private String title;
     private String description;
     private String country;
     private String region;
-    private String topic;
+    
 }

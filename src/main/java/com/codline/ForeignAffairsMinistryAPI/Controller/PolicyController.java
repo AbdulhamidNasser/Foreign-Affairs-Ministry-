@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class PolicyController {
 
     @Autowired
-    private PolicyService PolicyService;
+    policyRepository policyRepository;
 
 
     @PostMapping
