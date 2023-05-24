@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 @Data
 public class Policy {
 
+    @Id
+
 
 
     private Integer id;
