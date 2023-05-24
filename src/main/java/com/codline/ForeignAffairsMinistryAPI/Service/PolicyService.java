@@ -8,7 +8,7 @@ public class PolicyService {
 
     final PolicyRepository policyRepository;
 
-
+    @Autowired
     public PolicyService(PolicyRepository policyRepository) {
         this.policyRepository = policyRepository;
     }
