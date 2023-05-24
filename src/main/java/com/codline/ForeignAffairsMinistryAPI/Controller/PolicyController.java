@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class PolicyController {
 
     @Autowired
-    private PolicyRepository policyRepository;
+    private PolicyService PolicyService;
 
 
     @PostMapping
@@ -58,6 +58,6 @@ public class PolicyController {
         return policyRepository.findByTopic(topic);
     }
 
-    
+
 
 }
