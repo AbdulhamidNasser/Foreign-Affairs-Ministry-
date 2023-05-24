@@ -1,9 +1,8 @@
-package com.codline.ForeignAffairsMinistryAPI.Service;
+package com.codline.ForeignAffairsMinistryAPI.Models;
 
-import lombok.Data;
-
-@Data
 public class Policy {
+
+
 
     private Long id;
     private String title;
@@ -11,9 +10,4 @@ public class Policy {
     private String country;
     private String region;
     private String topic;
-
-
 }
-
-
-

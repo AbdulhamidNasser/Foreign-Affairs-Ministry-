@@ -11,4 +11,16 @@ public class NewsController {
 
     @Autowired
     private NewsRepository newsRepository;
+
+
+
+
+
+
+
+
+
+
+
+
 }

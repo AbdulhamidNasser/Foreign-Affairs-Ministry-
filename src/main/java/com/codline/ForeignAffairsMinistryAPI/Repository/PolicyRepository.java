@@ -1,14 +1,14 @@
 package com.codline.ForeignAffairsMinistryAPI.Repository;
 
-import com.codline.ForeignAffairsMinistryAPI.Service.Policy;
+import com.codline.ForeignAffairsMinistryAPI.Service.PolicyService;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PolicyRepository extends JpaRepository<Policy, Long> {
+public interface PolicyRepository extends JpaRepository<PolicyService, Long> {
 
 
-    Iterable<Policy> findByCountry(String country);
+    Iterable<PolicyService> findByCountry(String country);
 
-    Iterable<Policy> findByRegion(String region);
+    Iterable<PolicyService> findByRegion(String region);
 
-    Iterable<Policy> findByTopic(String topic);
+    Iterable<PolicyService> findByTopic(String topic);
 }

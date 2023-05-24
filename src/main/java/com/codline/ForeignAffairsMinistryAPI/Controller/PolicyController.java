@@ -1,7 +1,7 @@
 package com.codline.ForeignAffairsMinistryAPI.Controller;
 
 import com.codline.ForeignAffairsMinistryAPI.Repository.PolicyRepository;
-import com.codline.ForeignAffairsMinistryAPI.Service.Policy;
+import com.codline.ForeignAffairsMinistryAPI.Service.PolicyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,13 +14,13 @@ public class PolicyController {
 
 
     @PostMapping
-    public Policy createPolicy(@RequestBody Policy policy) {
+    public PolicyService createPolicy(@RequestBody PolicyService policy) {
         return policyRepository.save(policy);
     }
 
 
     @PutMapping("/{id}")
-    public Policy updatePolicy(@PathVariable Long id, @RequestBody Policy policy) {
+    public PolicyService updatePolicy(@PathVariable Long id, @RequestBody PolicyService policy) {
         policy.setId(id);
         return policyRepository.save(policy);
     }
@@ -34,27 +34,27 @@ public class PolicyController {
 
 
     @GetMapping
-    public Iterable<Policy> getAllPolicies() {
+    public Iterable<PolicyService> getAllPolicies() {
         return policyRepository.findAll();
     }
 
 
 
     @GetMapping("/{country}")
-    public Iterable<Policy> getPoliciesByCountry(@PathVariable String country) {
+    public Iterable<PolicyService> getPoliciesByCountry(@PathVariable String country) {
         return policyRepository.findByCountry(country);
     }
 
 
     @GetMapping("/{region}")
-    public Iterable<Policy> getPoliciesByRegion(@PathVariable String region) {
+    public Iterable<PolicyService> getPoliciesByRegion(@PathVariable String region) {
         return policyRepository.findByRegion(region);
     }
 
 
 
     @GetMapping("/{topic}")
-    public Iterable<Policy> getPoliciesByTopic(@PathVariable String topic) {
+    public Iterable<PolicyService> getPoliciesByTopic(@PathVariable String topic) {
         return policyRepository.findByTopic(topic);
     }
 

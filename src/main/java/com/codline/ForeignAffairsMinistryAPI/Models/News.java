@@ -1,8 +1,5 @@
-package com.codline.ForeignAffairsMinistryAPI.Service;
+package com.codline.ForeignAffairsMinistryAPI.Models;
 
-import lombok.Data;
-
-@Data
 public class News {
 
     private Long id;
