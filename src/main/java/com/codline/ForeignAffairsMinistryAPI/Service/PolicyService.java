@@ -13,6 +13,21 @@ public class PolicyService {
     public PolicyService(PolicyRepository policyRepository) {
         this.policyRepository = policyRepository;
     }
+
+    public List<Policy> getAllPolicies() {
+        return policyRepository.findAll();
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
