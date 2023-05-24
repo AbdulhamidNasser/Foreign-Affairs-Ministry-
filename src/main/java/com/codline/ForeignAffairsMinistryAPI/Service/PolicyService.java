@@ -43,6 +43,11 @@ public class PolicyService {
     }
 
 
+    public void deletePolicy(Integer id) {
+        policyRepository.deleteById(id);
+    }
+
+
 
 
 
