@@ -30,6 +30,9 @@ public class PolicyService {
         return policyRepository.save(policy);
     }
 
+    public void updatePolicy(Integer id, Policy updatedPolicy) {
+        Optional<Policy> optionalPolicy = policyRepository.findById(id);
+
 
 
 
