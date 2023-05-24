@@ -21,7 +21,7 @@ public class PolicyService {
         return policyRepository.findAll();
     }
 
-    public Optional<Policy> getPolicyById(Long id) {
+    public Optional<Policy> getPolicyById(Integer id) {
         return policyRepository.findById(id);
     }
 
