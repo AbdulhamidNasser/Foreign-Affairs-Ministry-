@@ -14,6 +14,7 @@ import javax.persistence.Id;
 public class News {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
 
     private Integer id;
