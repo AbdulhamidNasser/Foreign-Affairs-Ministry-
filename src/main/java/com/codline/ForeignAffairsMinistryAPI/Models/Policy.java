@@ -1,5 +1,8 @@
 package com.codline.ForeignAffairsMinistryAPI.Models;
 
+import lombok.Setter;
+
+@Setter
 public class Policy {
 
 
