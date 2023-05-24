@@ -26,6 +26,10 @@ public class PolicyService {
         return policyRepository.findById(id);
     }
 
+    public Policy addPolicy(Policy policy) {
+        return policyRepository.save(policy);
+    }
+
 
 
 
