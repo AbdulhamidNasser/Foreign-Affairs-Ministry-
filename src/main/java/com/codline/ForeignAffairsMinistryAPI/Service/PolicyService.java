@@ -32,6 +32,15 @@ public class PolicyService {
 
     public void updatePolicy(Integer id, Policy updatedPolicy) {
         Optional<Policy> optionalPolicy = policyRepository.findById(id);
+        if (optionalPolicy.isPresent()) {
+            Policy policy = optionalPolicy.get();
+            policy.setCountry(updatedPolicy.getCountry());
+            policy.setRegion(updatedPolicy.getRegion());
+            policy.setTitle(updatedPolicy.getTitle());
+            policy.setDescription(updatedPolicy.getDescription());
+            policyRepository.save(policy);
+        }
+    }
 
 
 
