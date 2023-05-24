@@ -1,8 +1,11 @@
 package com.codline.ForeignAffairsMinistryAPI.Service;
 
+import com.codline.ForeignAffairsMinistryAPI.Models.Policy;
 import com.codline.ForeignAffairsMinistryAPI.Repository.PolicyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class PolicyService {
