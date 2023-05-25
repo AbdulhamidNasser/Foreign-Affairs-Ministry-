@@ -5,6 +5,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
+@AllArgsConstructor
 public class RequestPolicy {
 
 
