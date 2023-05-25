@@ -18,6 +18,8 @@ public class PolicyService {
         this.policyRepository = policyRepository;
     }
 
+
+
     public List<Policy> getAllPolicies() {
         return policyRepository.findAll();
     }
@@ -25,10 +27,15 @@ public class PolicyService {
     public Optional<Policy> getPolicyById(Integer id) {
         return policyRepository.findById(id);
     }
-
+///
     public Policy addPolicy(Policy policy) {
         return policyRepository.save(policy);
     }
+
+    public List<Policy> getPolicyByCountry(String country) {
+        return policyRepository.findByCountry(country);
+    }
+    ///
 
     public void updatePolicy(Integer id, Policy updatedPolicy) {
         Optional<Policy> optionalPolicy = policyRepository.findById(id);
