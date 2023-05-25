@@ -1,5 +1,6 @@
 package com.codline.ForeignAffairsMinistryAPI.Controller;
 
+import com.codline.ForeignAffairsMinistryAPI.Models.Policy;
 import com.codline.ForeignAffairsMinistryAPI.Repository.PolicyRepository;
 import com.codline.ForeignAffairsMinistryAPI.RequestObject.RequestPolicy;
 import com.codline.ForeignAffairsMinistryAPI.Service.PolicyService;
@@ -12,6 +13,12 @@ import org.springframework.web.bind.annotation.*;
 public class PolicyController {
 
     final PolicyService policyService;
+
+    public ResponseEntity<Void> saveAccount(@RequestBody RequestPolicy requestPolicy) {
+        createPolicy(requestPolicy);
+        return ResponseEntity.ok().build();
+
+    }
 
     ///hhhhh
 
