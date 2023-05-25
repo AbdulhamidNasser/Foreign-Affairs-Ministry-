@@ -15,5 +15,4 @@ public class RequestPolicy {
     String topic;
     String details;
 
-
 }
