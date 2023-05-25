@@ -9,4 +9,5 @@ import lombok.Setter;
 @Data
 public class BaseEntity {
     Boolean isActive;
+    Date createdDate;
 }
