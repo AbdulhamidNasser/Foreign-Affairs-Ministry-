@@ -6,11 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/policies")
+@RequestMapping("/api/policies")
 public class PolicyController {
 
+    final PolicyService policyService;
+
     @Autowired
-    policyRepository policyRepository;
+    public PolicyController(PolicyService policyService) {
+        this.policyService = policyService;
+    }
+
+
 
 
     @PostMapping
@@ -20,7 +26,7 @@ public class PolicyController {
 
 
     @PutMapping("/{id}")
-    public PolicyService updatePolicy(@PathVariable Long id, @RequestBody PolicyService policy) {
+    public PolicyService updatePolicy(@PathVariable Integer id, @RequestBody PolicyService policy) {
         policy.setId(id);
         return policyRepository.save(policy);
     }
@@ -28,7 +34,7 @@ public class PolicyController {
 
 
     @DeleteMapping("/{id}")
-    public void deletePolicy(@PathVariable Long id) {
+    public void deletePolicy(@PathVariable Integer id) {
         policyRepository.deleteById(id);
     }
 
