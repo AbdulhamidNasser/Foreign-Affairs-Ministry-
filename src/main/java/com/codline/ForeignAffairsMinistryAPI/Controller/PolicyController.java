@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+
 @RestController
 @RequestMapping("/api/policies")
 public class PolicyController {
@@ -19,6 +21,18 @@ public class PolicyController {
         return ResponseEntity.ok().build();
 
     }
+
+    public void createPolicy(RequestPolicy requestPolicy) {
+        Policy policy = new Policy();
+        policy.setCountry(requestPolicy.getCountry());
+        policy.setRegion(requestPolicy.getRegion());
+        policy.setTopic(requestPolicy.getTopic());
+        policy.setDetails(requestPolicy.getDetails());
+        policy.setIsActive(true);
+        policy.setCreatedDate(new Date());
+        policyService.addPolicy(policy);
+    }
+
     ///hhhhh
 
     @Autowired

@@ -21,8 +21,8 @@ public class Policy extends BaseEntity{
 
 
     private Integer id;
-    private String title;
-    private String description;
+    private String topic;
+    private String details;
     private String country;
     private String region;
 
