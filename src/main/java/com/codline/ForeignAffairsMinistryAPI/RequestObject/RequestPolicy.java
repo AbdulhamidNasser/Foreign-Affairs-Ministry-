@@ -11,6 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class RequestPolicy {
     String country;
+    String region;
 
 
 }
