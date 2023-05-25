@@ -8,4 +8,5 @@ import lombok.Setter;
 @Setter
 @Data
 public class BaseEntity {
+    Boolean isActive;
 }
