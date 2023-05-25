@@ -13,4 +13,5 @@ public class RequestNews {
 
     String country;
     String region;
+    String title;
 }
