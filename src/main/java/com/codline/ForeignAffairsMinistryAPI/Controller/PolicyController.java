@@ -1,8 +1,10 @@
 package com.codline.ForeignAffairsMinistryAPI.Controller;
 
 import com.codline.ForeignAffairsMinistryAPI.Repository.PolicyRepository;
+import com.codline.ForeignAffairsMinistryAPI.RequestObject.RequestPolicy;
 import com.codline.ForeignAffairsMinistryAPI.Service.PolicyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,10 +13,19 @@ public class PolicyController {
 
     final PolicyService policyService;
 
+    ///hhhhh
+
     @Autowired
     public PolicyController(PolicyService policyService) {
         this.policyService = policyService;
     }
+
+    @GetMapping
+    public ResponseEntity<List<Policy>> getAllPolicies() {
+        List<Policy> policies = policyService.getAllPolicies();
+        return new ResponseEntity<>(policies, HttpStatus.OK);
+    }
+
 
 
 
