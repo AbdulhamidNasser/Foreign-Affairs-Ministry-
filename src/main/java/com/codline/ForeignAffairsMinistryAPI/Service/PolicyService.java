@@ -43,7 +43,7 @@ public class PolicyService {
             Policy policy = optionalPolicy.get();
             policy.setCountry(updatedPolicy.getCountry());
             policy.setRegion(updatedPolicy.getRegion());
-            policy.setTitle(updatedPolicy.getTitle());
+            policy.setTopic(updatedPolicy.getTopic());
             policy.setDescription(updatedPolicy.getDescription());
             policyRepository.save(policy);
         }
