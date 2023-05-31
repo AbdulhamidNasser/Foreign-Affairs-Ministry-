@@ -15,4 +15,9 @@ public class NewsService {
         newsRepository.save(news);
     }
 
+    public void updateNews(Long newsId, String title , String country ,String region ,String details) {
+        Optional<News> optionalNews = newsRepository.findById(newsId);
+    }
+    }
+
 }
