@@ -39,5 +39,7 @@ public class News extends BaseEntity{
     }
 
 
+    public News() {
 
+    }
 }
