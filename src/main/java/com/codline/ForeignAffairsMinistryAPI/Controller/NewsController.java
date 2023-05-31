@@ -1,9 +1,12 @@
 package com.codline.ForeignAffairsMinistryAPI.Controller;
 
+import com.codline.ForeignAffairsMinistryAPI.Models.News;
+import com.codline.ForeignAffairsMinistryAPI.Models.updateNews;
 import com.codline.ForeignAffairsMinistryAPI.Repository.NewsRepository;
 import com.codline.ForeignAffairsMinistryAPI.RequestObject.RequestNews;
 import com.codline.ForeignAffairsMinistryAPI.Service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +28,7 @@ public class NewsController {
         news.setTitle(requestNews.getTitle());
         news.setCountry(requestNews.getCountry());
         news.setRegion(requestNews.getRegion());
-        news.setDetails(requestNews.getDetails());
+        news.setDescription(requestNews.getDetails());
         news.setIsActive(true);
         news.setCreatedDate(new Date());
         newsService.addPolicy(news);
@@ -37,7 +40,7 @@ public class NewsController {
             String country = update.getCountry() ;
             String region =update.getRegion();
             String title=update.getTitle();
-            String details=update.getDetails();
+            String details=update.getDescription();
             newsService.updateNews(newsId,title,country,region,details);
             return ResponseEntity.ok("updated successfully");
         } catch (NewsNotFoundException e) {

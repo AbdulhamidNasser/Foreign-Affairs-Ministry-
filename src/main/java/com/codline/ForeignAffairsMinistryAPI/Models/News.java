@@ -13,16 +13,34 @@ import javax.persistence.Id;
 @Setter
 @Entity
 @Data
-public class News {
+public class News extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
 
-    private Integer id;
+
+
+    @Column(nullable = false)
     private String title;
-    private String description;
+
+    @Column(nullable = false)
     private String country;
+
+    @Column(nullable = false)
     private String region;
+
+    @Column(nullable = false)
+    private String description;
+
+
+    public News(String title, String country, String region, String details) {
+        this.title = title;
+        this.country = country;
+        this.region = region;
+        this.description = details;
+    }
+
+
 
 }
