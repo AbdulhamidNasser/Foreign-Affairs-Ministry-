@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PolicyRepository extends JpaRepository<Policy, Integer> {
+public interface PolicyRepository extends JpaRepository<Policy, Long> {
 
     List<Policy> findByCountry(String country);
 
