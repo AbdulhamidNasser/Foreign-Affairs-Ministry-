@@ -13,6 +13,6 @@ public class RequestPolicy {
     String country;
     String region;
     String topic;
-    String details;
+    String description;
 
 }

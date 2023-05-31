@@ -31,7 +31,7 @@ public class PolicyController {
         policy.setCountry(requestPolicy.getCountry());
         policy.setRegion(requestPolicy.getRegion());
         policy.setTopic(requestPolicy.getTopic());
-        policy.setDetails(requestPolicy.getDetails());
+        policy.setDescription(requestPolicy.getdescription());
         policy.setIsActive(true);
         policy.setCreatedDate(new Date());
         policyService.addPolicy(policy);

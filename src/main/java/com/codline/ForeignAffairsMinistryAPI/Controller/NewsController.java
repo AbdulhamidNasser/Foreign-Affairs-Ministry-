@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/news")
 public class NewsController {
@@ -28,20 +30,20 @@ public class NewsController {
         news.setTitle(requestNews.getTitle());
         news.setCountry(requestNews.getCountry());
         news.setRegion(requestNews.getRegion());
-        news.setDescription(requestNews.getDetails());
+        news.setDescription(requestNews.getDescription());
         news.setIsActive(true);
         news.setCreatedDate(new Date());
         newsService.addPolicy(news);
     }
 
     @PutMapping("/api/news/{newsId}")
-    public ResponseEntity<String> updateNews(@PathVariable Long newsId, @RequestBody updateNews update) {
+    public ResponseEntity<String> updateNews(@PathVariable Integer newsId, @RequestBody updateNews update) {
         try {
             String country = update.getCountry() ;
             String region =update.getRegion();
             String title=update.getTitle();
-            String details=update.getDescription();
-            newsService.updateNews(newsId,title,country,region,details);
+            String description=update.getDescription();
+            newsService.updateNews(newsId,title,country,region,description);
             return ResponseEntity.ok("updated successfully");
         } catch (NewsNotFoundException e) {
             return ResponseEntity.notFound().build();

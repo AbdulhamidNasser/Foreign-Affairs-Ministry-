@@ -38,7 +38,7 @@ public class News extends BaseEntity{
         this.title = title;
         this.country = country;
         this.region = region;
-        this.description = details;
+        this.description = description;
     }
 
 

@@ -6,6 +6,8 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class NewsService {
     @Autowired
@@ -15,9 +17,22 @@ public class NewsService {
         newsRepository.save(news);
     }
 
-    public void updateNews(Long newsId, String title , String country ,String region ,String details) {
+    public void updateNews(Integer newsId, String title , String country ,String region ,String description) {
         Optional<News> optionalNews = newsRepository.findById(newsId);
+        if (((Optional<?>) optionalNews).isPresent()) {
+            News news = optionalNews.get();
+            news.setTitle(title);
+            news.setCountry(country);
+            news.setRegion(region);
+            news.setDescription(description);
+            newsRepository.save(news);
+        } else {
+            System.out.print("NOT FOUND");
+        }
     }
+    
+
+
     }
 
 }
